@@ -74,9 +74,12 @@ h1 {
 }
 
 p {
+    padding-bottom: 12px;
     font-size: 20px;
     font-weight: 400;
+    line-height: 32px;
 }
+
 
 a {
     color: var(--green);
@@ -107,6 +110,89 @@ a:hover:after {
 
 .logo img {
     width: 100%;
+}
+
+main {
+    display: flex;
+}
+
+section:first-child {
+    margin-right: 100px;
+}
+
+
+.people {
+    height: 100%;
+    display: flex;
+    padding-bottom: 24px;
+}
+
+.person__img {
+    width: 200px;
+    height: 200px;
+    background: var(--green);
+    border: solid 3px #fff;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.person__img img {
+    width: 100%;
+}
+
+.person__name {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: 700;
+    background: linear-gradient(90deg, var(--green), rgba(255,255,255,0.8));
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.person:last-child {
+    align-self: flex-end;
+}
+
+.person__img--filip {
+    transform: translate(10px, -30px);
+}
+
+button {
+    width: 350px;
+    margin-top: 32px;
+    padding: 16px 0;
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    background: var(--green);
+    background: linear-gradient(to right top, var(--green), rgba(255,255,255,0.6));
+    border: none;
+    position: relative;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+button:focus {
+    outline: #fff;
+}
+
+button::after {
+    width: 50px;
+    height: 150%;
+    position: absolute;
+    left: -100px;
+    top: -25px;
+    content: "";
+    background: rgba(255,255,255,0.4);
+    transform: rotate(20deg);
+    transition: transform 0.4s;    
+}
+
+button:hover:after {
+    transform: translateX(500px) rotate(20deg);
 }
 
 @keyframes slideDown {
